@@ -1,8 +1,8 @@
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
-        num = []
+        t = []
         for i in nums:
-            squared = i * i 
-            num.append(squared)
-        num.sort()
-        return num
+            squared = i ** 2 # -4*-4 = 16, -1*-1 = 1 
+            t.append(squared) # 16 will go to t, 
+            t.sort()
+        return t
