@@ -86,4 +86,13 @@ result.append(candidate2):
 
 If both conditions are true, candidate2 is added to the result list.
 
-Final result = [3]
+Variables
+result:
+
+This is a list to store the verified majority elements (elements that appear more than n // 3 times).
+n = len(nums):
+
+This calculates the total number of elements in the input list nums.
+n // 3:
+
+This represents the threshold for an element to qualify as a majority element. To be considered a majority element, the frequency of an element must exceed n // 3.
