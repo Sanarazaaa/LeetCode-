@@ -1,15 +1,18 @@
 class Solution:
     def reverseVowels(self, s: str) -> str:
-        a = []  # List to store vowels
-        for i in s:
-            if i in 'aeiouAEIOU':  # Check if character is a vowel
-                a.append(i)  # Append vowel to list
+        # Step 1: Find all vowels and store them in a list
+        vowels = [i for i in s if i in 'aeiouAEIOU']
         
-        result = []  # List to store the final result
+        # Step 2: Reverse the list of vowels
+        vowels.reverse()
+        
+        # Step 3: Create the result by replacing vowels in original string with reversed vowels
+        result = []
         for i in s:
-            if i in 'aeiouAEIOU':  # If it's a vowel, replace with the last vowel from 'a'
-                result.append(a.pop())  # Use the reversed vowels
+            if i in 'aeiouAEIOU':  # If the character is a vowel
+                result.append(vowels.pop(0))  # Replace it with the first vowel from the reversed list
             else:
-                result.append(i)  # Keep non-vowels as they are
+                result.append(i)  # If it's not a vowel, keep it as is
         
-        return ''.join(result)  # Convert list back to string
+        # Step 4: Join the list back into a string and return
+        return ''.join(result)
