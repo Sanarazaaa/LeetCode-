@@ -1,10 +1,10 @@
 class Solution:
     def myPow(self, x: float, n: int) -> float:
-        # Base case: Any number to the power of 0 is 1
-        if n == 0:
+        
+        if n == 0: # Base case: Any number to the power of 0 is 1
             return 1
-        # If the exponent is negative, take the reciprocal of x and use the positive exponent
-        elif n < 0:
+       
+        elif n < 0:  # If the exponent is negative, take the reciprocal of x and use the positive exponent
             return 1 / self.myPow(x, -n)
         # If the exponent is even, use the optimized method (divide and conquer)
         elif n % 2 == 0:
