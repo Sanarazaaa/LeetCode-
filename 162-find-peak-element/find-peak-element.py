@@ -4,9 +4,16 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        n = len(nums)  # Get the length of the list
-        max_value = nums[0]  # Initialize the max_value variable  
-        for i in range(0, n): # Find the maximum value in the list
-            if max_value < nums[i]:
-                max_value = nums[i]
-        return nums.index(max_value)  # Return the index of the maximum value
+        if(len(nums)<3):
+            return(nums.index(max(nums)))
+            
+        for i in range(1,len(nums)-1):
+            if(nums[i]>nums[i-1] and nums[i]>nums[i+1]):
+                return i
+            else:
+                if(i==len(nums)-2):
+                    return (nums.index(max(nums)))
+                    
+        
+
+        
