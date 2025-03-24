@@ -1,5 +1,3 @@
-
-
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
         stack = []  # stack to store indices of temperatures
