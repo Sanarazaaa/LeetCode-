@@ -3,9 +3,10 @@ from typing import List
 class Solution:
     def addSpaces(self, s: str, spaces: List[int]) -> str:
         result = []
-        space_set = set(spaces)
+        j = 0  # Pointer for spaces list
         for i in range(len(s)):
-            if i in space_set:
+            if j < len(spaces) and i == spaces[j]:
                 result.append(' ')
+                j += 1
             result.append(s[i])
         return ''.join(result)
