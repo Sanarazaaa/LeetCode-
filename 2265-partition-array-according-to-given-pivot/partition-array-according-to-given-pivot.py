@@ -1,5 +1,5 @@
 #zero-indexed array means: Zero-based array indexing is a way of numbering the items in an array such that the first item of it has an index of 0
-
+# work on the optimized approach
 class Solution:
     def pivotArray(self, nums: List[int], pivot: int) -> List[int]:
         result = []
